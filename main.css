@@ -1,0 +1,63 @@
+* {
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+}
+
+.picole {
+    position: relative;
+    width: 150px;
+    height: 230px;
+
+    border: 3px solid black;
+    border-top-left-radius: 75px;
+    border-top-right-radius: 75px;
+
+    background: repeating-linear-gradient(
+    315deg,
+    red 0%, red 10%,
+    blue 10%, blue 20%,
+    yellow 20%, yellow 30%,
+    green 30%, green 40%,
+    purple 40%, purple 50%,
+    red 5%, red 60%,
+    blue 60%, blue 70%,
+    yellow 70%, yellow 80%,
+    green 80%, green 90%,
+    purple 90%, purple 100%
+    );
+    background-size: 200% 200%;
+    animation: picole-animation 5s linear infinite forwards;
+}
+
+@keyframes picole-animation {
+    from {
+        background-position: 0% 0%;
+    }
+
+    to {
+        background-position: 100% 100%;
+    }
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+.palito {
+    position: absolute;
+    bottom: -80px;
+    left: 50%;
+    margin-left: -23px;
+
+    width: 40px;
+    height: 80px;
+
+    border: 3px solid black;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    background: #ffd80b;
+
+}
