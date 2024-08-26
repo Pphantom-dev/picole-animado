@@ -14,26 +14,29 @@ a {
 .box {
     font-size: 20px;
     color: white;
-    height: 250px;
-    width: 350px;
+    height: auto;
+    width: 90%;
+    max-width: 350px; /* Limita a largura máxima */
     border-radius: 10px;
     background: #191919;
     flex-direction: column;
     display: flex;
     align-items: center;
     justify-content: center;
+    padding: 20px; /* Adiciona um pouco de padding */
 }
 
 .button-container {
     display: flex;
     justify-content: space-around;
     height: 50px;
-    width: 150px;
+    width: 100%;
 }
 
 button {
     height: 30px;
-    width: 50px;
+    width: 40%;
+    max-width: 60px;
     background: white;
     border-radius: 5px;
     color: blue;
@@ -41,7 +44,6 @@ button {
     border: none;
     cursor: pointer;
     transition: background 0.3s, color 0.3s;
-
 }
 
 button:hover {
@@ -55,21 +57,19 @@ button:hover {
     background: #f20044;
     position: relative;
     transform: rotate(45deg);
-    box-shadow: -5px -5px 45px #f20044;
+    box-shadow: -5px 5px 45px #f20044;
     animation: heart 0.6s linear infinite;
 }
 
 @keyframes heart {
     0% {
         transform: rotate(-45deg) scale(1.1);
-
     }
-    80% {
+    50% {
         transform: rotate(-45deg) scale(1.05);
-
     }
     100% {
-        transform: rotate(-45deg) scale(1); 
+        transform: rotate(-45deg) scale(1);
     }
 }
 
@@ -93,37 +93,28 @@ button:hover {
 }
 
 h1 {
-    font-size: 2rem;
     color: aliceblue;
     text-align: center;
     font-family: "Times New Roman", Times, serif;
     position: relative;
-    vertical-align: bottom;
-    bottom: -100px;
-    right: 100px;
     font-style: oblique;
+    font-size: 1.5rem; /* Ajusta o tamanho da fonte */
+    margin-bottom: 20px; /* Adiciona margem inferior */
 }
 
 p {
     font-style: oblique;
-    font-size: 1rem;
 }
 
-@media (max-width: 60px) {
-    .box {
-        width: 90%;
-        height: auto;
-        font-size: 16px;
+@media (max-width: 600px) {
+    .heart {
+        height: 15vw;
+        width: 15vw;
     }
-    .button-container {
-        width:40%;
-    }
-    button {
-        width: 40%;
-    }
-    h1 {
-        font-size: 1.5rem;
-        bottom: -50px;
-        rigth: 0;
+    
+    .heart::before,
+    .heart::after {
+        height: 15vw;
+        width: 15vw;
     }
 }
